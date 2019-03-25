@@ -1,0 +1,17 @@
+[entry]
+
+X11.64="dist/build/hello-world/libhello-world.so"
+OSX.64="dist/build/hello-world/libhello-world.dylib"
+WIN.64="dist/build/hello-world/libhello-world.dll"
+
+[dependencies]
+
+X11.64=[  ]
+OSX.64=[  ]
+
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=true
