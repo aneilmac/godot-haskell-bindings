@@ -1,10 +1,4 @@
-cabal-version: 1.12
-
--- This file has been generated from package.yaml by hpack version 0.31.1.
---
--- see: https://github.com/sol/hpack
---
--- hash: dfb275b16ebf2b7ad7c7345596b6465748691487d90aee5547a2e61b316b1fd6
+cabal-version: 2.0
 
 name:           godot-haskell-bindings
 version:        0.1.0.0
@@ -23,11 +17,32 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/FortOyer/godot-haskell-bindings.git
+  location: https://github.com/FortOyer/godot-haskell-bindings
 
 library
   exposed-modules:
       GDNative
+  other-modules:
+      GDNative.Internal.Core.AABB
+      GDNative.Internal.Core.Array
+      GDNative.Internal.Core.Basis
+      GDNative.Internal.Core.Color
+      GDNative.Internal.Core.Dictionary
+      GDNative.Internal.Core.GDNative
+      GDNative.Internal.Core.NodePath
+      GDNative.Internal.Core.Plane
+      GDNative.Internal.Core.PoolArrays
+      GDNative.Internal.Core.Quat
+      GDNative.Internal.Core.Rect2
+      GDNative.Internal.Core.RID
+      GDNative.Internal.Core.String
+      GDNative.Internal.Core.StringName
+      GDNative.Internal.Core.Transform
+      GDNative.Internal.Core.Transform2D
+      GDNative.Internal.Core.Variant
+      GDNative.Internal.Core.Vector2
+      GDNative.Internal.Core.Vector3
+      GDNative.Internal.ApiStructGen
   hs-source-dirs:
       src
   build-depends:
@@ -38,6 +53,8 @@ library
     gdnative-sys-bindgen/godot_headers
   includes:
     gdnative_api_struct.gen.h
+  build-tool-depends:
+    c2hs:c2hs
 
 test-suite godot-haskell-bindings-test
   type: exitcode-stdio-1.0

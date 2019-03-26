@@ -6,7 +6,7 @@ license:        MIT
 build-type:     Simple
 
 foreign-library hello-world
-  type:                native-shared
+  type: native-shared
   
   if os(Windows)
     options: standalone
@@ -20,5 +20,5 @@ foreign-library hello-world
       src
   build-depends:
         base >=4.7 && <5
-      ,  godot-haskell-bindings
+      , godot-haskell-bindings
   default-language: Haskell2010
